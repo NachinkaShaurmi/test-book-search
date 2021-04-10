@@ -22,7 +22,7 @@ export const fetchBookFailure = (err) => ({
 });
 
 export const fetchBook = (text) => (dispatch) => {
-  
+  // const newText = text.replace(" ", "+");
   dispatch(fetchBookRequest());
   axios
     .get(`http://openlibrary.org/search.json?q=${text}`)
