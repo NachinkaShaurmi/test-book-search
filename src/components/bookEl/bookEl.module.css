@@ -1,0 +1,38 @@
+.card {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 200px;
+  height: 260px;
+  box-shadow: 0 0 3px;
+  border-radius: 12px;
+  background-color: aliceblue;
+  transition: .6s;
+}
+
+.card:hover {
+  box-shadow: 0 0 6px;
+  transform: scale(1.05);
+  cursor: pointer;
+}
+
+.photo { 
+  overflow: hidden;
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+}
+
+.photo img {
+  border-radius: 10px;
+}
+
+
+.title, .author {
+  max-width: 200px;
+  padding: 0 4px;
+}
