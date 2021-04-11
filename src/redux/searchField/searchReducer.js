@@ -9,7 +9,7 @@ export const initialState = {
 };
 
 // Reducer
-export const searchReducer = (state = initialState, action) => {
+const searchReducer = (state = initialState, action) => {
   switch (action.type) {
     case CHANGE_SEARCH_TO_EMPTY:
       return {

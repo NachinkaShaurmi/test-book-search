@@ -7,9 +7,10 @@ import {
   getLoadingFromState,
   getSearchFromState,
 } from "./redux/selectors";
-import BookEl from "./components/BookEl/BookEl";
-import useDebounce from "./components/customHook/useDebounce";
+import BookEl from "./components/bookEl/BookEl";
+import useDebounce from "./customHook/useDebounce";
 import { changeSearchToValue } from "./redux/searchField/searchActions";
+import Popup from "./components/popup/Popup";
 
 function App() {
   const books = useSelector(getBooksFromState);
@@ -41,7 +42,9 @@ function App() {
   }, [debouncedSearch]);
 
   const handlerSearchField = (value) => {
-    dispatch(changeSearchToValue(value));
+    if (!loading) {
+      dispatch(changeSearchToValue(value));
+    }
   };
 
   return (
@@ -63,6 +66,7 @@ function App() {
         </button>
       </div>  
       <div className={s.cards}>{loading ? <div className={s.preloader}></div> : books.length === 0 ? null : booksList}</div>
+      <Popup />
     </div>
   );
 }

@@ -18,11 +18,19 @@
   cursor: pointer;
 }
 
-.photo {
+.photo { 
   overflow: hidden;
-  border-radius: 14px;
-  margin: 10px;
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
 }
+
+.photo img {
+  border-radius: 10px;
+}
+
 
 .title, .author {
   max-width: 200px;
